@@ -42,7 +42,7 @@ export const Signup = () => {
   
   useEffect(()=>{
     if(status==='fullfilled'){
-      toast.success("Welcome! Verify your email to start shopping on mern-ecommerce.")
+      toast.success("Welcome! Verify your email to start shopping on mern-shop.")
       reset()
     }
     return ()=>{
