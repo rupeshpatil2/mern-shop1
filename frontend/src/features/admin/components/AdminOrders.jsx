@@ -96,7 +96,7 @@ export const AdminOrders = () => {
                   <TableCell align="left">Id</TableCell>
                   <TableCell align="left">Item</TableCell>
                   <TableCell align="right">Total Amount</TableCell>
-                  <TableCell align="right">Shipping Address</TableCell>
+                  {/* <TableCell align="right">Shipping Address</TableCell> */}
                   <TableCell align="right">Payment Method</TableCell>
                   <TableCell align="right">Order Date</TableCell>
                   <TableCell align="right">Status</TableCell>
@@ -124,14 +124,14 @@ export const AdminOrders = () => {
                       }
                     </TableCell>
                     <TableCell align="right">{order.total}</TableCell>
-                    <TableCell align="right">
+                    {/* <TableCell align="right">
                       <Stack>
                         <Typography>{order.address[0].street}</Typography>
                         <Typography>{order.address[0].city}</Typography>
                         <Typography>{order.address[0].state}</Typography>
                         <Typography>{order.address[0].postalCode}</Typography>
                       </Stack>
-                    </TableCell>
+                    </TableCell> */}
                     <TableCell align="right">{order.paymentMode}</TableCell>
                     <TableCell align="right">{new Date(order.createdAt).toDateString()}</TableCell>
 

@@ -33,7 +33,7 @@ export const Footer = () => {
 
                 <Stack rowGap={'1rem'} padding={'1rem'}>
                     <Typography variant='h6'>Support</Typography>
-                    <Typography sx={labelStyles}>11th Main Street, Dhaka,  DH 1515, California.</Typography>
+                    <Typography sx={labelStyles}>JM Road, Shivajinagar, Pune.</Typography>
                     <Typography sx={labelStyles}>exclusive@gmail.com</Typography>
                     <Typography sx={labelStyles}>+88015-88888-9999</Typography>
                 </Stack>
@@ -57,7 +57,7 @@ export const Footer = () => {
 
                 <Stack rowGap={'1rem'} padding={'1rem'}>
                     <Typography  variant='h6'>Download App</Typography>
-                    <Typography sx={{...labelStyles,color:"graytext",fontWeight:500}}>Save $3 with App New User Only</Typography>
+                    <Typography sx={{...labelStyles,color:"graytext",fontWeight:500}}>Save 10% with App New User Only</Typography>
                     <Stack flexDirection={'row'} columnGap={'.5rem'}>
 
                         <Box width={'100px'} height={"100px"}>
