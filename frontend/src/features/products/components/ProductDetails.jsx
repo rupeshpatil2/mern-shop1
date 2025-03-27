@@ -24,8 +24,8 @@ import Lottie from 'lottie-react'
 import {loadingAnimation} from '../../../assets'
 
 
-const SIZES=['XS','S','M','L','XL']
-const COLORS=['#020202','#F6F6F6','#B82222','#BEA9A9','#E2BB8D']
+// const SIZES=['XS','S','M','L','XL']
+// const COLORS=['#020202','#F6F6F6','#B82222','#BEA9A9','#E2BB8D']
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 
@@ -279,7 +279,7 @@ export const ProductDetails = () => {
                         <Stack sx={{rowGap:"1.3rem"}} width={'fit-content'}>
 
                             {/* colors */}
-                            <Stack flexDirection={'row'} alignItems={'center'} columnGap={is387?'5px':'1rem'} width={'fit-content'}>
+                            {/* <Stack flexDirection={'row'} alignItems={'center'} columnGap={is387?'5px':'1rem'} width={'fit-content'}>
                                 <Typography>Colors: </Typography>
                                 <Stack flexDirection={'row'} columnGap={is387?".5rem":".2rem"} >
                                     {
@@ -290,10 +290,10 @@ export const ProductDetails = () => {
                                         ))
                                     }
                                 </Stack>
-                            </Stack>
+                            </Stack> */}
                             
                             {/* size */}
-                            <Stack flexDirection={'row'} alignItems={'center'} columnGap={is387?'5px':'1rem'} width={'fit-content'}>
+                            {/* <Stack flexDirection={'row'} alignItems={'center'} columnGap={is387?'5px':'1rem'} width={'fit-content'}>
                                 <Typography>Size: </Typography>
                                 <Stack flexDirection={'row'} columnGap={is387?".5rem":"1rem"}>
                                     {
@@ -304,7 +304,7 @@ export const ProductDetails = () => {
                                         ))
                                     }
                                 </Stack>
-                            </Stack>
+                            </Stack> */}
 
                             {/* quantity , add to cart and wishlist */}
                             <Stack flexDirection={"row"} columnGap={is387?".3rem":"1.5rem"} width={'100%'} >
