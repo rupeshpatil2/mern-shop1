@@ -98,9 +98,9 @@ export const Login = () => {
                     <Stack flexDirection={'row'} justifyContent={'space-between'} alignItems={'center'} flexWrap={'wrap-reverse'} >
 
                       <MotionConfig whileHover={{x:2}} whileTap={{scale:1.050}}>
-                          <motion.div>
+                          {/* <motion.div>
                               <Typography mr={'1.5rem'} sx={{textDecoration:"none",color:"text.primary"}} to={'/forgot-password'} component={Link}>Forgot password</Typography>
-                          </motion.div>
+                          </motion.div> */}
 
                           <motion.div>
                             <Typography sx={{textDecoration:"none",color:"text.primary"}} to={'/signup'} component={Link}>Don't have an account? <span style={{color:theme.palette.primary.dark}}>Register</span></Typography>
