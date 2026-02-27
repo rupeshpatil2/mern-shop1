@@ -17,7 +17,7 @@ const { connectToDB } = require("./database/db")
 
 
 
-// server init
+// server init.
 const server=express()
 
 // database connection
