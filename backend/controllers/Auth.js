@@ -165,7 +165,8 @@ exports.forgotPassword=async(req,res)=>{
         const hashedToken=await bcrypt.hash(passwordResetToken,10)
 
         // saves hashed token in passwordResetToken collection
-        newToken=new PasswordResetToken({user:isExistingUser._id,token:hashedToken,expiresAt:Date.now() + parseInt(process.env.OTP_EXPIRATION_TIME)})
+        // expires in 14 days (1209600000 ms) to match PASSWORD_RESET_TOKEN_EXPIRATION JWT expiry
+        newToken=new PasswordResetToken({user:isExistingUser._id,token:hashedToken,expiresAt:Date.now() + (14 * 24 * 60 * 60 * 1000)})
         await newToken.save()
 
         // sends the password reset link to the user's mail
