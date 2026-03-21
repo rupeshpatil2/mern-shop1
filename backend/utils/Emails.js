@@ -9,10 +9,18 @@ const transporter = nodemailer.createTransport({
 });
 
 exports.sendMail = async(receiverEmail,subject,body) => {
-    await transporter.sendMail({
-    from: process.env.EMAIL,
-    to: receiverEmail,
-    subject: subject,
-    html: body
-  });
+    try {
+        await transporter.sendMail({
+            from: process.env.EMAIL,
+            to: receiverEmail,
+            subject: subject,
+            html: body
+        });
+    } catch (error) {
+        console.error("Failed to send email. Error:", error.message);
+        console.log("FALLBACK: Email content logged below for development:");
+        console.log(`To: ${receiverEmail}`);
+        console.log(`Subject: ${subject}`);
+        console.log(`Body: ${body}\n`);
+    }
 };

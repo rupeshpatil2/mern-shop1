@@ -204,6 +204,11 @@ const authSlice=createSlice({
             .addCase(logoutAsync.fulfilled,(state)=>{
                 state.status='fullfilled'
                 state.loggedInUser=null
+                state.resendOtpStatus='idle'
+                state.resendOtpSuccessMessage=null
+                state.resendOtpError=null
+                state.otpVerificationStatus='idle'
+                state.otpVerificationError=null
             })
             .addCase(logoutAsync.rejected,(state,action)=>{
                 state.status='rejected'
