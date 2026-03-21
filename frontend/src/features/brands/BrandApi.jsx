@@ -1,4 +1,4 @@
-import { axiosi } from "../../config/axios";
+﻿import { axiosi } from "../../config/axios";
 
 export const fetchAllBrands=async()=>{
     try {

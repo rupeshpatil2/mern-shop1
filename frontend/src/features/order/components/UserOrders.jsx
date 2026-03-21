@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+﻿import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getOrderByUserIdAsync, resetOrderFetchStatus, selectOrderFetchStatus, selectOrders } from '../OrderSlice'
 import { selectLoggedInUser } from '../../auth/AuthSlice'
@@ -120,7 +120,7 @@ export const UserOrders = () => {
 
                                             <Stack>
                                                 <Typography>Total Amount</Typography>
-                                                <Typography>₹{order.total}</Typography>
+                                                <Typography>Rs. {order.total}</Typography>
                                             </Stack>
                                         </Stack>
 
@@ -149,7 +149,7 @@ export const UserOrders = () => {
                                                                 <Typography variant='body1'  fontSize={'.9rem'}  color={'text.secondary'}>{product.product.brand.name}</Typography>
                                                                 <Typography color={'text.secondary'} fontSize={'.9rem'}>Qty: {product.quantity}</Typography>
                                                             </Stack>
-                                                            <Typography>₹{product.product.price}</Typography>
+                                                            <Typography>Rs. {product.product.price}</Typography>
                                                         </Stack>
 
                                                         <Typography color={'text.secondary'}>{product.product.description}</Typography>

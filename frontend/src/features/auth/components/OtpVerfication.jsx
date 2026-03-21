@@ -106,7 +106,7 @@ export const OtpVerfication = () => {
                             </Stack>
                        </Stack>
                         <LoadingButton loading={otpVerificationStatus==='pending'}  type='submit' fullWidth variant='contained'>Verify</LoadingButton>
-                        <Button onClick={handleLogout} color='error' sx={{textTransform:"none"}}>Wrong Email? Logout</Button>
+                        <Button type="button" onClick={handleLogout} color='error' sx={{textTransform:"none"}}>Wrong Email? Logout</Button>
                     </Stack>
                 ):
                 <>
@@ -115,7 +115,7 @@ export const OtpVerfication = () => {
                     <Typography fontWeight={'600'} color={'GrayText'}>{loggedInUser?.email}</Typography>
                 </Stack>
                 <LoadingButton onClick={handleSendOtp} loading={resendOtpStatus==='pending'} fullWidth variant='contained'>Get OTP</LoadingButton>
-                <Button onClick={handleLogout} color='error' sx={{textTransform:"none"}}>Wrong Email? Logout</Button>
+                <Button type="button" onClick={handleLogout} color='error' sx={{textTransform:"none"}}>Wrong Email? Logout</Button>
                 </>
              }
 

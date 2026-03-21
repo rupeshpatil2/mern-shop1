@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+﻿import React, { useEffect } from 'react'
 import { CartItem } from './CartItem'
 import { Button, Chip, Paper, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { resetCartItemRemoveStatus, selectCartItemRemoveStatus, selectCartItems } from '../CartSlice'
@@ -70,24 +70,24 @@ export const Cart = ({checkout}) => {
 
                             <Stack flexDirection={'row'} justifyContent={'space-between'}>
                                 <Typography>Subtotal</Typography>
-                                <Typography>₹{subtotal}</Typography>
+                                <Typography>Rs. {subtotal}</Typography>
                             </Stack>
 
                             <Stack flexDirection={'row'} justifyContent={'space-between'}>
                                 <Typography>Shipping</Typography>
-                                <Typography>₹{SHIPPING}</Typography>
+                                <Typography>Rs. {SHIPPING}</Typography>
                             </Stack>
 
                             <Stack flexDirection={'row'} justifyContent={'space-between'}>
                                 <Typography>Taxes</Typography>
-                                <Typography>₹{TAXES}</Typography> 
+                                <Typography>Rs. {TAXES}</Typography> 
                             </Stack>
 
                             <hr/>
 
                             <Stack flexDirection={'row'} justifyContent={'space-between'}>
                                 <Typography>Total</Typography>
-                                <Typography>₹{subtotal+SHIPPING+TAXES}</Typography>
+                                <Typography>Rs. {subtotal+SHIPPING+TAXES}</Typography>
                             </Stack>
                             
 
@@ -101,7 +101,7 @@ export const Cart = ({checkout}) => {
                             </Stack>
 
                             <Stack>
-                                <Typography variant='h6' fontWeight={500}>₹{subtotal}</Typography>
+                                <Typography variant='h6' fontWeight={500}>Rs. {subtotal}</Typography>
                             </Stack>
                         </>
                     )

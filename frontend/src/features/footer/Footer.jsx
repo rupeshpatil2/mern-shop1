@@ -1,4 +1,4 @@
-import { Box, IconButton, TextField, Typography, useMediaQuery, useTheme } from '@mui/material'
+﻿import { Box, IconButton, TextField, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { Stack } from '@mui/material'
 import React from 'react'
 import { QRCodePng, appStorePng, googlePlayPng ,facebookPng,instagramPng,twitterPng,linkedinPng} from '../../assets'

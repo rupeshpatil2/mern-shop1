@@ -17,14 +17,14 @@ exports.chatWithAi = async (req, res) => {
         const products = await Product.find({ isDeleted: false });
         
         // Summarize products to create an organized catalog the AI can easily read
-        const catalog = products.map(p => `- ${p.title}: $${p.price} (Stock: ${p.stockQuantity}). ${p.description.substring(0, 150)}...`).join('\n');
+        const catalog = products.map(p => `- ${p.title}: Rs. ${p.price} (Stock: ${p.stockQuantity}). ${p.description.substring(0, 150)}...`).join('\n');
 
         const systemPrompt = `You are a helpful, enthusiastic AI shopping assistant for HealthKart. 
 Your job is to help users find the best products based on their needs.
 Here is the current HealthKart inventory:
 ${catalog}
 
-When recommending a product, always use the exact name and price. If asked about something we don't have, politely mention you only assist with HealthKart's current inventory. Be concise, friendly, and conversational! Output clean texts or bullet points.`;
+When recommending a product, always use the exact name and price in Rupees (always use 'Rs.' instead of '$'). If asked about something we don't have, politely mention you only assist with HealthKart's current inventory. Be concise, friendly, and conversational! Output clean texts or bullet points.`;
 
         // Send a request to the blazing fast Gemini 2.5 Flash model
         // We use the modern genai structure: ai.models.generateContent

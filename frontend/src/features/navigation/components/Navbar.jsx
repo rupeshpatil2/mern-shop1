@@ -90,14 +90,14 @@ export const Navbar=({isProductList=false})=> {
               {
                 loggedInUser?.isAdmin && 
               
-                <MenuItem  onClick={handleCloseUserMenu}>
-                  <Typography component={Link} color={'text.primary'} sx={{textDecoration:"none"}} to="/admin/add-product" textAlign="center">Add new Product</Typography>
+                <MenuItem onClick={handleCloseUserMenu} component={Link} to="/admin/add-product" sx={{textDecoration:"none", color:"text.primary"}}>
+                  <Typography textAlign="center">Add new Product</Typography>
                 </MenuItem>
               
               }
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography component={Link} color={'text.primary'} sx={{textDecoration:"none"}} to={setting.to} textAlign="center">{setting.name}</Typography>
+                <MenuItem key={setting.name} onClick={handleCloseUserMenu} component={Link} to={setting.to} sx={{textDecoration:"none", color:"text.primary"}}>
+                  <Typography textAlign="center">{setting.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>

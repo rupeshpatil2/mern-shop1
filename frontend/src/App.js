@@ -68,7 +68,7 @@ function App() {
   return isAuthChecked ? (
     <>
       <RouterProvider router={routes}/>
-      <AiChatWidget />
+      {loggedInUser && loggedInUser.isVerified && <AiChatWidget />}
     </>
   ) : "";
 }

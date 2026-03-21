@@ -1,4 +1,4 @@
-import { FormHelperText, Paper, Stack, Typography, useMediaQuery, useTheme} from '@mui/material'
+﻿import { FormHelperText, Paper, Stack, Typography, useMediaQuery, useTheme} from '@mui/material'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
@@ -71,7 +71,7 @@ export const ProductCard = ({id,title,price,thumbnail,brand,stockQuantity,handle
             </Stack>
 
             <Stack sx={{flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
-                <Typography>₹{price}</Typography>
+                <Typography>Rs. {price}</Typography>
                 {
                     !isWishlistCard? isProductAlreadyInCart?
                     'Added to cart'
