@@ -13,7 +13,6 @@ const userRoutes=require("./routes/User")
 const addressRoutes=require('./routes/Address')
 const reviewRoutes=require("./routes/Review")
 const wishlistRoutes=require("./routes/Wishlist")
-const aiRoutes=require("./routes/Ai")
 const { connectToDB } = require("./database/db")
 
 
@@ -42,8 +41,6 @@ server.use("/categories",categoryRoutes)
 server.use("/address",addressRoutes)
 server.use("/reviews",reviewRoutes)
 server.use("/wishlist",wishlistRoutes)
-server.use("/ai",aiRoutes)
-
 
 
 server.get("/",(req,res)=>{

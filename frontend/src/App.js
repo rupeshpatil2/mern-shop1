@@ -11,8 +11,6 @@ import { useFetchLoggedInUserDetails } from "./hooks/useAuth/useFetchLoggedInUse
 import { AddProductPage, AdminOrdersPage, CartPage, CheckoutPage, ForgotPasswordPage, HomePage, LoginPage, OrderSuccessPage, OtpVerificationPage, ProductDetailsPage, ProductUpdatePage, ResetPasswordPage, SignupPage, UserOrdersPage, UserProfilePage, WishlistPage } from './pages';
 import { AdminDashboardPage } from './pages/AdminDashboardPage';
 import { NotFoundPage } from './pages/NotFoundPage';
-import { AiChatWidget } from './features/ai/AiChatWidget';
-
 
 function App() {
 
@@ -68,7 +66,6 @@ function App() {
   return isAuthChecked ? (
     <>
       <RouterProvider router={routes}/>
-      {loggedInUser && loggedInUser.isVerified && <AiChatWidget />}
     </>
   ) : "";
 }
